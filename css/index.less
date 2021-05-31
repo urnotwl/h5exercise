@@ -1,0 +1,323 @@
+//公共样式
+html, body, h1, h2, h3, h4, h5, h6, p, ul, li {
+    margin: 0px;
+    padding: 0px;
+    font: 14px "微软雅黑";
+}
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+li{list-style: none;}
+a{display: block;text-decoration: none;color: white;}
+img{display: block;}
+
+.home(){
+       .left{
+            position: absolute;
+            width: 837px;
+            height:437px;
+            left: 3%;
+            margin-top: 3%;
+            .photo{
+                width: 100%;
+                height: 100%;
+                li{
+                    float: left;
+                    width: 259px;
+                    height: 434px;
+                    margin: 0 0 0 20px;
+                    transition: 1s;
+                    p{
+                        text-align: center;
+                        font-size: 18px;
+                        margin-top: 20px;
+                    }
+                    a{
+                        margin-top: 20px;
+                        img{
+                            margin: auto;
+                        }
+                    }
+                }
+            }
+        }
+        .right{
+            position: absolute;
+            float: right;
+            width: 156px;
+            height: 147px;
+            overflow: hidden;
+            z-index: 2;
+            border-right: 2px solid;
+            top: 70px;
+            right: 35px;
+            padding-right: 10px;
+            text-align: right;
+            transition: 1s;
+            h1{
+                font-size: 34px;
+                line-height: 45px;
+                font-weight: 100;
+            }
+            p{
+                font-size: 18px;
+                margin: 20px 0 10px 0;
+                line-height: 1.5em;
+            }
+            a{
+                color: #333333;
+                text-decoration: underline;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+            
+        }
+}
+
+
+//头部导航条
+#head{
+    width: 100%;
+    height: 60px;
+    background: rgba(0,0,0,0.8);
+    position: absolute;
+    overflow: hidden;
+    z-index: 2;
+    .wrap{
+        width: 980px;
+        height: 60px;
+        margin: auto;
+        .active{
+            a{
+                background: #ffcc00;
+                color: #000000;
+            }
+        }
+        .logo{
+            float: left;
+            //margin-top: 17px;
+            margin: 16px 20px 0 0;
+        }
+        .list{
+            float: right;
+            li{
+                float: left;
+                
+                a{
+                    width: 90px;
+                    height: 60px;
+                    text-align: center;
+                    line-height: 60px;
+                    
+                    &:hover{
+                        background: #ffcc00;
+                        color: #000000;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//内容区
+#content{
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    overflow: hidden;
+    .list{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        transition: 1s top;
+        li{
+            width: 100%;
+            height: 100%;
+            background-position: 50% 50% !important;
+            overflow: hidden;
+            position: relative;
+        }
+        //第一屏
+        .home1{
+            background:url(../img/s1.jpg) center;
+            width: 100%;
+            height: 100%;
+           img{
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               margin-top: -260px;
+               margin-left: -545px;
+               transition: 1s;
+           }
+        }
+        //第二屏
+        .home2{
+            background: url(../img/s2.jpg);
+            width: 100%;
+            height: 100%;
+            .home();
+            .bg{
+                position: absolute;
+                top: 195px;
+                right: 0;
+            }
+         
+        }
+        //第三屏
+        .home3{
+            background: url(../img/s3.jpg) center;
+            .home();
+            .right{
+                width: 170px;
+            }
+            .bg{
+                position: absolute;
+                top: 107px;
+                right: 0;
+            }
+            
+        }
+        //第四屏
+        .home4{
+            background: url(../img/s4.jpg) center;
+            .home();
+            .left{
+                position: absolute;
+                width: 1140px;
+                height: 694px;
+                left: 3%;
+                margin-top: 3%;
+                .photo{
+                    width: 100%;
+                    height: 100%;
+                    li{
+                        width: 310px;
+                    }
+                }
+            }
+            .bg{
+                position: absolute;
+                top: 325px;
+                right: 0;
+            }
+            
+        }
+        //第五屏
+        .home5{
+            background: url(../img/s5.jpg) center;
+            .home();
+            .left{
+                position: absolute;
+                width: 1140px;
+                height: 694px;
+                left: 3%;
+                margin-top: 3%;
+                .photo{
+                    width: 100%;
+                    height: 100%;
+                    li{
+                        &:last-child{
+                            width: 311px;
+                        }
+                    }
+                }
+               
+            }
+            .right{
+                width: 182px;
+            }
+            .bg{
+                position: absolute;
+                top: 297px;
+                right: 0;
+            }
+           
+        }
+    }
+    .point{
+            width: 10px;
+            height: 90px;
+            position: fixed;
+            z-index: 3;
+            right: 15px;
+            top: 50%;
+            .active{
+                a{
+                    background: black;
+                }
+            }
+            li{
+                a{
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    border: 1px solid black;
+                    margin: 7px 0 0 0;
+                    transition:1s background;
+                    &:hover{
+                       background: black;
+                    }
+                }
+            }
+        }
+}
+
+//第四屏
+@keyframes move1{
+    0%{
+        transform: translate(330px,-500px);
+    }
+    20%{
+        transform: translate(330px,0px);
+    }
+    40%{
+        transform: translate(330px,-50px);
+    }
+    60%{
+        transform: translate(330px,0px);
+    }
+    100%{
+        transform: translate(0px,0px);
+    }
+}
+
+@keyframes move2{
+    0%{
+        transform: translateY(-500px);
+    }
+    20%{
+        transform: translateY(0px);
+    }
+    40%{
+        transform: translateY(-50px);
+    }
+    60%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes move3{
+    0%{
+        transform: translate(-330px,-500px);
+    }
+    20%{
+        transform: translate(-330px,0px);
+    }
+    40%{
+        transform: translate(-330px,-50px);
+    }
+    60%{
+        transform: translate(-330px,0px);
+    }
+    100%{
+        transform: translate(0px,0px);
+    }
+}
